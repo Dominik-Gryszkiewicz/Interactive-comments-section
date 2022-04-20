@@ -1,6 +1,6 @@
 import bootstrap from 'bootstrap'
 import data from './data/data.json.data'
-import {CommentsImg, CommentsName, CommentsTime, CommentsConetent, CommentsScore, ReplyImg, ReplyName, ReplyTime, ReplyConetent, ReplyScore, addCommentImg} from './js/variables.js'
+import {CommentsImg, CommentsName, CommentsTime, CommentsConetent, CommentsScore, ReplyImg, ReplyName, ReplyTime, ReplyConetent, ReplyScore, addCommentImg, firstPlus, secondPlus, firstMinus, secondMinus, replyPlus, replyMinus, firstScore, secondScore, replyScoreNumber} from './js/variables.js'
 
 fetch(data)
     .then((response)=>{
@@ -25,3 +25,27 @@ fetch(data)
         }
         addCommentImg.src = response.currentUser.image.png
     })
+
+firstPlus.addEventListener('click', () => {
+    firstScore.textContent = parseInt(firstScore.textContent) + 1
+})
+
+firstMinus.addEventListener('click', () => {
+    firstScore.textContent = parseInt(firstScore.textContent) - 1
+})
+
+secondPlus.addEventListener('click', () => {
+    secondScore.textContent = parseInt(secondScore.textContent) + 1
+})
+
+secondMinus.addEventListener('click', () => {
+    secondScore.textContent = parseInt(secondScore.textContent) - 1
+})
+
+replyPlus.addEventListener('click', () => {
+    replyScoreNumber.textContent = parseInt(replyScoreNumber.textContent) + 1
+})
+
+replyMinus.addEventListener('click', () => {
+    replyScoreNumber.textContent = parseInt(replyScoreNumber.textContent) - 1
+}) 

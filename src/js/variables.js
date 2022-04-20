@@ -4,6 +4,16 @@ export let CommentsTime = document.querySelectorAll('.component__comment-box__ti
 export let CommentsConetent = document.querySelectorAll('.component__comment-box__content')
 export let CommentsScore = document.querySelectorAll('.component__comment-box__elements__rating__number')
 
+export let firstPlus = document.querySelector('#first-plus')
+export let secondPlus = document.querySelector('#second-plus')
+export let firstMinus = document.querySelector('#first-minus')
+export let secondMinus = document.querySelector('#second-minus')
+export let replyPlus = document.querySelector('#reply-plus')
+export let replyMinus = document.querySelector('#reply-minus')
+export let firstScore = document.querySelector('#first-score')
+export let secondScore = document.querySelector('#second-score')
+export let replyScoreNumber = document.querySelector('#reply-score')
+
 export let ReplyImg = document.querySelectorAll('.component__comment-box--reply .component__comment-box__tittle__img')
 export let ReplyName = document.querySelectorAll('.component__comment-box--reply .component__comment-box__tittle__author')
 export let ReplyTime = document.querySelectorAll('.component__comment-box--reply .component__comment-box__tittle__time')
