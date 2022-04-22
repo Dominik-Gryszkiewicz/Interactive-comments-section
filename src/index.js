@@ -1,6 +1,10 @@
-import bootstrap from 'bootstrap'
-import data from './data/data.json.data'
-import {CommentsImg, CommentsName, CommentsTime, CommentsConetent, CommentsScore, ReplyImg, ReplyName, ReplyTime, ReplyConetent, ReplyScore, addCommentImg, firstPlus, secondPlus, firstMinus, secondMinus, replyPlus, replyMinus, firstScore, secondScore, replyScoreNumber} from './js/variables.js'
+import bootstrap from 'bootstrap';
+import data from './data/data.json.data';
+import {CommentsImg, CommentsName, CommentsTime, CommentsConetent, CommentsScore, ReplyImg, ReplyName, ReplyTime, ReplyConetent, ReplyScore, addCommentImg, firstPlus, secondPlus, firstMinus, secondMinus, replyPlus, replyMinus, firstScore, secondScore, replyScoreNumber, addBtn} from './js/variables.js';
+import {newComment} from './js/newComment.js'
+
+
+addBtn.addEventListener('click', newComment)
 
 fetch(data)
     .then((response)=>{

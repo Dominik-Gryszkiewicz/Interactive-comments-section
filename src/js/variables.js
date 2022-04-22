@@ -21,3 +21,6 @@ export let ReplyConetent = document.querySelectorAll('.component__comment-box--r
 export let ReplyScore = document.querySelectorAll('.component__comment-box--reply .component__comment-box__elements__rating__number')
 
 export let addCommentImg = document.querySelector('.component__comment-box--add__elements__img')
+export let addBtn = document.querySelector('.component__comment-box--add__elements__btn')
+export let commentsList = document.querySelector('.component')
+export let addCommentBox = document.querySelector('.component__comment-box--add')
