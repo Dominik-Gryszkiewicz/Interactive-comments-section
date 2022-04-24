@@ -81,5 +81,6 @@ export const addReplyMax = () => {
        let addReplyBox = document.querySelector('.component__comment-box--add')
        addReplyBox.remove()
        secondReplyBtn.addEventListener('click', writeReplyMax)
+       newCommentBoxElementsReplyTextDelete.addEventListener('click', () => newCommentBox.remove())
     }
 }

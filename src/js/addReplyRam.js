@@ -1,4 +1,4 @@
-import {commentsList, secondReplyBtn, addCommentBox} from './variables.js'
+import {commentsList, thirdReplyBtn, addCommentBox} from './variables.js'
 import {writeReplyRam} from './writeReplyRam.js'
 
 export const addReplyRam = () => {
@@ -80,6 +80,7 @@ export const addReplyRam = () => {
        commentsList.insertBefore(newCommentBox, addCommentBox)
        let addReplyBox = document.querySelector('.component__comment-box--add')
        addReplyBox.remove()
-       secondReplyBtn.addEventListener('click', writeReplyRam)
+       thirdReplyBtn.addEventListener('click', writeReplyRam)
+       newCommentBoxElementsReplyTextDelete.addEventListener('click', () => newCommentBox.remove())
     }
 }

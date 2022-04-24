@@ -81,5 +81,6 @@ export const addReplyAmy = () => {
        let addReplyBox = document.querySelector('.component__comment-box--add')
        addReplyBox.remove()
        firstReplyBtn.addEventListener('click', writeReplyAmy)
+       newCommentBoxElementsReplyTextDelete.addEventListener('click', () => newCommentBox.remove())
     }
 }

@@ -21,6 +21,7 @@ export let secondComment = document.querySelector('#second-comment')
 export let firstReply = document.querySelector('#first-reply')
 export let firstReplyContent = firstReply.querySelector('.component__comment-box__content')
 export let secondReply = document.querySelector('#second-reply')
+export let secondReplyDeleteBtn = secondReply.querySelector('.component__comment-box__elements__reply__text--delete')
 
 export let ReplyImg = document.querySelectorAll('.component__comment-box--reply .component__comment-box__tittle__img')
 export let ReplyName = document.querySelectorAll('.component__comment-box--reply .component__comment-box__tittle__author')

@@ -1,6 +1,6 @@
 import bootstrap from 'bootstrap';
 import data from './data/data.json.data';
-import {CommentsImg, CommentsName, CommentsTime, CommentsConetent, CommentsScore, ReplyImg, ReplyName, ReplyTime, ReplyConetent, ReplyScore, addCommentImg, firstPlus, secondPlus, firstMinus, secondMinus, replyPlus, replyMinus, firstScore, secondScore, replyScoreNumber, addBtn, firstReplyBtn, secondReplyBtn, thirdReplyBtn} from './js/variables.js';
+import {CommentsImg, CommentsName, CommentsTime, CommentsConetent, CommentsScore, ReplyImg, ReplyName, ReplyTime, ReplyConetent, ReplyScore, addCommentImg, firstPlus, secondPlus, firstMinus, secondMinus, replyPlus, replyMinus, firstScore, secondScore, replyScoreNumber, addBtn, firstReplyBtn, secondReplyBtn, thirdReplyBtn,secondReply, secondReplyDeleteBtn} from './js/variables.js';
 import {newComment} from './js/newComment.js'
 import {writeReplyAmy} from './js/writeReplyAmy.js'
 import {writeReplyMax} from './js/writeReplyMax.js'
@@ -11,6 +11,7 @@ addBtn.addEventListener('click', newComment)
 firstReplyBtn.addEventListener('click', writeReplyAmy)
 secondReplyBtn.addEventListener('click', writeReplyMax)
 thirdReplyBtn.addEventListener('click', writeReplyRam)
+secondReplyDeleteBtn.addEventListener('click', () => secondReply.remove())
 
 fetch(data)
     .then((response)=>{
