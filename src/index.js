@@ -1,16 +1,19 @@
 import bootstrap from 'bootstrap';
 import data from './data/data.json.data';
-import {CommentsImg, CommentsName, CommentsTime, CommentsConetent, CommentsScore, ReplyImg, ReplyName, ReplyTime, ReplyConetent, ReplyScore, addCommentImg, firstPlus, secondPlus, firstMinus, secondMinus, replyPlus, replyMinus, firstScore, secondScore, replyScoreNumber, addBtn, firstReplyBtn, secondReplyBtn, thirdReplyBtn,secondReply, secondReplyDeleteBtn} from './js/variables.js';
-import {newComment} from './js/newComment.js'
+import {CommentsImg, CommentsName, CommentsTime, CommentsConetent, CommentsScore, ReplyImg, ReplyName, ReplyTime, ReplyConetent, ReplyScore, addCommentImg, firstPlus, secondPlus, firstMinus, secondMinus, replyPlus, replyMinus, firstScore, secondScore, replyScoreNumber, addBtn, firstReplyBtn, secondReplyBtn, thirdReplyBtn,secondReply, secondReplyDeleteBtn, secondReplyEditBtn} from './js/variables.js';
+import {addNewComment} from './js/addNewComment.js'
 import {writeReplyAmy} from './js/writeReplyAmy.js'
 import {writeReplyMax} from './js/writeReplyMax.js'
 import {writeReplyRam} from './js/writeReplyRam.js'
+import {editReplyJul} from './js/editReplyJul.js'
 
 
-addBtn.addEventListener('click', newComment)
+addBtn.addEventListener('click', addNewComment)
 firstReplyBtn.addEventListener('click', writeReplyAmy)
 secondReplyBtn.addEventListener('click', writeReplyMax)
 thirdReplyBtn.addEventListener('click', writeReplyRam)
+secondReplyEditBtn.addEventListener('click', editReplyJul)
+secondReplyEditBtn.addEventListener('click', () => secondReply.remove())
 secondReplyDeleteBtn.addEventListener('click', () => secondReply.remove())
 
 fetch(data)

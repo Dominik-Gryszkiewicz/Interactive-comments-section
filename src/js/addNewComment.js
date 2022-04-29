@@ -1,6 +1,8 @@
 import {addCommentBox, commentsList} from './variables.js'
+import {editNewComment} from './editNewComment.js'
+export let editetContent
 
-export const newComment = () => {
+export const addNewComment = () => {
 
     let newCommentContent = document.querySelector('.component__comment-box--add__input')
     if (newCommentContent.value) {
@@ -72,6 +74,14 @@ export const newComment = () => {
        newCommentBoxElementsReply.appendChild(newCommentBoxElementsReplyImgEdit);
        newCommentBoxElementsReply.appendChild(newCommentBoxElementsReplyTextEdit);
 
+       const returnEditedContent = function(){
+        editetContent = newCommentBoxContent
+     }
+
        commentsList.insertBefore(newCommentBox, addCommentBox)
+       newCommentBoxElementsReplyTextEdit.addEventListener('click', returnEditedContent)
+       newCommentBoxElementsReplyTextEdit.addEventListener('click', editNewComment)
+       newCommentBoxElementsReplyTextEdit.addEventListener('click', () => newCommentBox.remove())
+       newCommentBoxElementsReplyTextDelete.addEventListener('click', () => newCommentBox.remove())
     }
 }

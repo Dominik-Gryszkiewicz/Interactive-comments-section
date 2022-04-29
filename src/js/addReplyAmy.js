@@ -1,5 +1,8 @@
-import {commentsList, secondComment, firstReplyBtn} from './variables.js'
+import {firstComment, firstReplyBtn} from './variables.js'
 import {writeReplyAmy} from './writeReplyAmy.js'
+import {editReplyAmy} from './editReplyAmy.js'
+import {insertAfter} from './insertAfter.js'
+export let editetContent
 
 export const addReplyAmy = () => {
 
@@ -25,7 +28,7 @@ export const addReplyAmy = () => {
        let newCommentBoxElementsReplyImgEdit = document.createElement("img")
        let newCommentBoxElementsReplyTextEdit = document.createElement("p")
 
-       newCommentBox.classList.add('component__comment-box', 'ms-3')
+       newCommentBox.classList.add('component__comment-box', 'component__comment-box--replyAmy', 'ms-3')
        newCommentBoxTittle.classList.add('component__comment-box__tittle')
        newCommentBoxTittleImg.classList.add('component__comment-box__tittle__img',  'img-fluid')
        newCommentBoxTittleAuthor.classList.add('component__comment-box__tittle__author')
@@ -42,8 +45,9 @@ export const addReplyAmy = () => {
        newCommentBoxElementsReplyImgDelete.classList.add('component__comment-box__elements__reply__img', 'component__comment-box__elements__reply__img--other')
        newCommentBoxElementsReplyTextDelete.classList.add('component__comment-box__elements__reply__text', 'component__comment-box__elements__reply__text--delete', 'me-3')
        newCommentBoxElementsReplyImgEdit.classList.add('component__comment-box__elements__reply__img', 'component__comment-box__elements__reply__img--other')
-       newCommentBoxElementsReplyTextEdit.classList.add('component__comment-box__elements__reply__text')
+       newCommentBoxElementsReplyTextEdit.classList.add('component__comment-box__elements__reply__text', 'component__comment-box__elements__reply__text--edit')
       
+
        newCommentBoxTittleImg.setAttribute('src', './images/avatars/image-juliusomo.png')
        newCommentBoxTittleAuthor.textContent = 'juliusomo'
        newCommentBoxTittleYou.textContent = 'you'
@@ -77,10 +81,17 @@ export const addReplyAmy = () => {
        newCommentBoxElementsReply.appendChild(newCommentBoxElementsReplyImgEdit);
        newCommentBoxElementsReply.appendChild(newCommentBoxElementsReplyTextEdit);
 
-       commentsList.insertBefore(newCommentBox, secondComment)
+      const returnEditedContent = function(){
+         editetContent = newCommentBoxContent
+      }
+
+       insertAfter(newCommentBox, firstComment)
        let addReplyBox = document.querySelector('.component__comment-box--add')
        addReplyBox.remove()
        firstReplyBtn.addEventListener('click', writeReplyAmy)
        newCommentBoxElementsReplyTextDelete.addEventListener('click', () => newCommentBox.remove())
+       newCommentBoxElementsReplyTextEdit.addEventListener('click', returnEditedContent)
+       newCommentBoxElementsReplyTextEdit.addEventListener('click', editReplyAmy)
+       newCommentBoxElementsReplyTextEdit.addEventListener('click', () => newCommentBox.remove())
     }
 }

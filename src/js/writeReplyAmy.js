@@ -1,5 +1,6 @@
-import {secondComment, commentsList, firstReplyBtn} from './variables.js';
+import {firstComment, firstReplyBtn} from './variables.js';
 import {addReplyAmy} from './addReplyAmy.js'
+import {insertAfter} from './insertAfter.js'
 
 export const writeReplyAmy = () => {
     let newReplyBox = document.createElement('div');
@@ -23,7 +24,7 @@ export const writeReplyAmy = () => {
     newReplyBoxElements.appendChild(newReplyBoxElementsImg);
     newReplyBoxElements.appendChild(newReplyBoxElementsBtn);
 
-    commentsList.insertBefore(newReplyBox, secondComment)
+    insertAfter(newReplyBox, firstComment)
     firstReplyBtn.removeEventListener('click', writeReplyAmy)
     newReplyBoxElementsBtn.addEventListener('click', addReplyAmy)
 }

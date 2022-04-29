@@ -1,8 +1,9 @@
-import {secondComment, secondReplyBtn} from './variables.js';
-import {addReplyMax} from './addReplyMax.js'
+import {firstReply, thirdReplyBtn, secondReplyContent} from './variables.js';
+import {addReplyRam, editetContent} from './addReplyRam.js'
+import {writeReplyRam} from './writeReplyRam.js'
 import {insertAfter} from './insertAfter.js'
 
-export const writeReplyMax = () => {
+export const editReplyJul = () => {
     let newReplyBox = document.createElement('div');
     let newReplyBoxInput = document.createElement('textarea');
     let newReplyBoxElements = document.createElement('div');
@@ -13,9 +14,22 @@ export const writeReplyMax = () => {
     newReplyBoxInput.classList.add('component__comment-box--add__input');
     newReplyBoxElements.classList.add('component__comment-box--add__elements');
     newReplyBoxElementsImg.classList.add('component__comment-box--add__elements__img');
-    newReplyBoxElementsBtn.classList.add('component__comment-box--add__elements__btn');
+    newReplyBoxElementsBtn.classList.add('component__comment-box--add__elements__btn'); 
 
-    newReplyBoxInput.setAttribute('placeholder', 'Add a comment...')
+    if (editetContent !== undefined) {
+        let editetContentSpan = editetContent.querySelector('span')
+        if (editetContentSpan !== null) {
+            editetContentSpan.remove()
+        }
+        newReplyBoxInput.textContent = editetContent.innerText
+    } else {
+        let secondReplyContentSpan = secondReplyContent.querySelector('span')
+        if (secondReplyContentSpan !== null) {
+            secondReplyContentSpan.remove()
+        }
+        newReplyBoxInput.textContent = secondReplyContent.innerText
+    }
+    
     newReplyBoxElementsImg.setAttribute('src', './images/avatars/image-juliusomo.png')
     newReplyBoxElementsBtn.innerText = 'Send';
 
@@ -24,7 +38,7 @@ export const writeReplyMax = () => {
     newReplyBoxElements.appendChild(newReplyBoxElementsImg);
     newReplyBoxElements.appendChild(newReplyBoxElementsBtn);
 
-    insertAfter(newReplyBox, secondComment)
-    secondReplyBtn.removeEventListener('click', writeReplyMax)
-    newReplyBoxElementsBtn.addEventListener('click', addReplyMax)
+    insertAfter(newReplyBox, firstReply)
+    thirdReplyBtn.removeEventListener('click', writeReplyRam)
+    newReplyBoxElementsBtn.addEventListener('click', addReplyRam)
 }
