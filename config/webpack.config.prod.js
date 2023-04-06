@@ -7,7 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    main: ['./src/index.js', './sass/style.sass'],
+    main: ['./src/index.js', './src/sass/style.sass'],
   },
   output: {
     filename: 'js/[name]-[contenthash].js',
@@ -15,6 +15,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.data$/,
+        type: 'json'
+      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']

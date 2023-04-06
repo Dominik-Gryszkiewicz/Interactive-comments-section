@@ -16,11 +16,11 @@ export const editReplyAmy = () => {
     newReplyBoxElementsImg.classList.add('component__comment-box--add__elements__img');
     newReplyBoxElementsBtn.classList.add('component__comment-box--add__elements__btn'); 
 
-    let editetContentSpan = editetContent.querySelector('span')
-    if (editetContentSpan !== null) {
-        editetContentSpan.remove()
-    }
-
+        let editetContentSpan = editetContent.querySelector('span')
+        if (editetContentSpan !== null) {
+            editetContentSpan.remove()
+        }
+    
     newReplyBoxInput.textContent = editetContent.innerText
     newReplyBoxElementsImg.setAttribute('src', './images/avatars/image-juliusomo.png')
     newReplyBoxElementsBtn.innerText = 'Send';

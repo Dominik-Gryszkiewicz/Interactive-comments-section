@@ -1,6 +1,12 @@
 .component
     margin-bottom: 2rem
     margin-top: 1rem
+    padding: 0 1.4rem
+    max-width: 700px
+    @media (min-width: 400px)
+        padding: 0 1.6rem
+    @media (min-width: 768px)
+        padding: 0 4rem
     &__comment-box
         background-color: hsl(0, 0%, 100%)
         color: hsl(211, 10%, 45%)
@@ -11,7 +17,7 @@
             display: flex
             align-items: center
             &__img
-                width: 10%
+                width: 28px
             &__author
                 font-weight: 700
                 color: hsl(212, 24%, 26%)
@@ -27,7 +33,7 @@
                 color: hsl(211, 10%, 55%)
         &__content
             line-height: 140%
-            padding: 15px 0
+            padding: 10px 0
             word-wrap: break-word
             &__span
                 color: #5357B6
@@ -43,12 +49,22 @@
                 height: 30px
                 background-color: #F5F6FA
                 border-radius: 10px
+                &--desktop
+                    height: 80%
+                    width: 33px
+                    margin-right: 15px
+                    cursor: pointer
                 &__number
                     font-weight: 700
                     color: #5357B6
+                    &--desktop
+                        font-weight: 700
+                        color: #5357B6
+                        cursor: initial
             &__reply
                 display: flex
                 align-items: center
+                cursor: pointer
                 &__img
                     width: 20%
                     &--other
@@ -57,7 +73,7 @@
                     font-weight: 700
                     color: #5357B6
                     margin-left: 5px
-                    &--delete
+                    &--delete, &--delete-desktop
                         color: hsl(358, 79%, 66%)
         &--add
             &__input
@@ -74,7 +90,7 @@
                 justify-content: space-between
                 margin-top: 10px
                 &__img
-                    width: 10%
+                    width: 28px
                 &__btn
                     background-color: #5357B6
                     color: white

@@ -1,6 +1,14 @@
-import {firstComment, firstReplyBtn} from './variables.js';
-import {addReplyAmy} from './addReplyAmy.js'
-import {insertAfter} from './insertAfter.js'
+import {
+    firstComment,
+    firstReplyBtn,
+    firstReplyBtnDesktop
+} from './variables.js';
+import {
+    addReplyAmy
+} from './addReplyAmy.js'
+import {
+    insertAfter
+} from './insertAfter.js'
 
 export const writeReplyAmy = () => {
     let newReplyBox = document.createElement('div');
@@ -26,5 +34,6 @@ export const writeReplyAmy = () => {
 
     insertAfter(newReplyBox, firstComment)
     firstReplyBtn.removeEventListener('click', writeReplyAmy)
+    firstReplyBtnDesktop.removeEventListener('click', writeReplyAmy)
     newReplyBoxElementsBtn.addEventListener('click', addReplyAmy)
 }

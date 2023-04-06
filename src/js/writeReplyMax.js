@@ -1,4 +1,4 @@
-import {secondComment, secondReplyBtn} from './variables.js';
+import {secondComment, secondReplyBtn, secondReplyBtnDesktop} from './variables.js';
 import {addReplyMax} from './addReplyMax.js'
 import {insertAfter} from './insertAfter.js'
 
@@ -26,5 +26,6 @@ export const writeReplyMax = () => {
 
     insertAfter(newReplyBox, secondComment)
     secondReplyBtn.removeEventListener('click', writeReplyMax)
+    secondReplyBtnDesktop.removeEventListener('click', writeReplyMax)
     newReplyBoxElementsBtn.addEventListener('click', addReplyMax)
 }

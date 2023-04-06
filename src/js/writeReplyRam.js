@@ -1,4 +1,4 @@
-import {firstReply, thirdReplyBtn} from './variables.js';
+import {firstReply, thirdReplyBtn, thirdReplyBtnDesktop} from './variables.js';
 import {addReplyRam} from './addReplyRam.js'
 import {insertAfter} from './insertAfter.js'
 
@@ -26,5 +26,6 @@ export const writeReplyRam = () => {
 
     insertAfter(newReplyBox, firstReply)
     thirdReplyBtn.removeEventListener('click', writeReplyRam)
+    thirdReplyBtnDesktop.removeEventListener('click', writeReplyRam)
     newReplyBoxElementsBtn.addEventListener('click', addReplyRam)
 }

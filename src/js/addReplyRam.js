@@ -1,4 +1,4 @@
-import {firstReply, thirdReplyBtn} from './variables.js'
+import {firstReply, thirdReplyBtn, thirdReplyBtnDesktop} from './variables.js'
 import {writeReplyRam} from './writeReplyRam.js'
 import {editReplyRam} from './editReplyRam.js'
 import {insertAfter} from './insertAfter.js'
@@ -28,7 +28,7 @@ export const addReplyRam = () => {
        let newCommentBoxElementsReplyImgEdit = document.createElement("img")
        let newCommentBoxElementsReplyTextEdit = document.createElement("p")
 
-       newCommentBox.classList.add('component__comment-box', 'component__comment-box--replyRam', 'ms-3')
+       newCommentBox.classList.add('component__comment-box', 'component__comment-box--replyRam', 'ms-3', 'ms-sm-4', 'ms-md-5')
        newCommentBoxTittle.classList.add('component__comment-box__tittle')
        newCommentBoxTittleImg.classList.add('component__comment-box__tittle__img',  'img-fluid')
        newCommentBoxTittleAuthor.classList.add('component__comment-box__tittle__author')
@@ -89,6 +89,7 @@ export const addReplyRam = () => {
        let addReplyBox = document.querySelector('.component__comment-box--add')
        addReplyBox.remove()
        thirdReplyBtn.addEventListener('click', writeReplyRam)
+       thirdReplyBtnDesktop.addEventListener('click', writeReplyRam)
        newCommentBoxElementsReplyTextDelete.addEventListener('click', () => newCommentBox.remove())
        newCommentBoxElementsReplyTextEdit.addEventListener('click', returnEditedContent)
        newCommentBoxElementsReplyTextEdit.addEventListener('click', editReplyRam)

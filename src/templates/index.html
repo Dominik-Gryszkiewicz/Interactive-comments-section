@@ -14,83 +14,138 @@
     <main>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="component col-11">
-                    <div class="component__comment-box" id = "first-comment">
-                        <div class="component__comment-box__tittle">
-                            <img src="" alt="avatar" class="component__comment-box__tittle__img img-fluid">
-                            <p class="component__comment-box__tittle__author"></p>
-                            <p class="component__comment-box__tittle__time"></p>
-                        </div>
-                        <p class="component__comment-box__content"></p>
-                        <div class="component__comment-box__elements">
-                            <div class="component__comment-box__elements__rating">
-                                <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="first-plus">
-                                <p class="component__comment-box__elements__rating__number" id="first-score"></p>
-                                <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="first-minus">
-                            </div>
-                            <div class="component__comment-box__elements__reply" id = 'first-reply-btn'>
-                                <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
-                                <p class="component__comment-box__elements__reply__text">Reply</p>
+                <div class="component">
+                    <div class="component__comment-box d-sm-flex" id = "first-comment">
+                        <div class="desktop-box1">
+                            <div class="component__comment-box__elements__rating
+                            component__comment-box__elements__rating--desktop d-none d-sm-flex flex-sm-column">
+                                <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="first-plus-desktop">
+                                <p class="component__comment-box__elements__rating__number--desktop" id="first-score-desktop"></p>
+                                <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="first-minus-desktop">
                             </div>
                         </div>
-                    </div>
-                    <div class="component__comment-box" id = 'second-comment'>
-                        <div class="component__comment-box__tittle">
-                            <img src="" alt="avatar" class="component__comment-box__tittle__img img-fluid">
-                            <p class="component__comment-box__tittle__author"></p>
-                            <p class="component__comment-box__tittle__time"></p>
-                        </div>
-                        <p class="component__comment-box__content"></p>
-                        <div class="component__comment-box__elements">
-                            <div class="component__comment-box__elements__rating">
-                                <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="second-plus">
-                                <p class="component__comment-box__elements__rating__number" id="second-score"></p>
-                                <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="second-minus">
+                        <div class="desktop-box2">
+                            <div class="component__comment-box__tittle">
+                                <img src="" alt="avatar" class="component__comment-box__tittle__img img-fluid">
+                                <p class="component__comment-box__tittle__author"></p>
+                                <p class="component__comment-box__tittle__time"></p>
+                                <div class="component__comment-box__elements__reply component__comment-box__elements__reply--desktop ms-auto d-none d-sm-flex" id = 'first-reply-btn-desktop'>
+                                    <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
+                                    <p class="component__comment-box__elements__reply__text">Reply</p>
+                                </div>
                             </div>
-                            <div class="component__comment-box__elements__reply" id ="second-reply-btn">
-                                <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
-                                <p class="component__comment-box__elements__reply__text">Reply</p>
+                            <p class="component__comment-box__content"></p>
+                            <div class="component__comment-box__elements">
+                                <div class="component__comment-box__elements__rating d-sm-none">
+                                    <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="first-plus">
+                                    <p class="component__comment-box__elements__rating__number" id="first-score"></p>
+                                    <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="first-minus">
+                                </div>
+                                <div class="component__comment-box__elements__reply d-sm-none" id = 'first-reply-btn'>
+                                    <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
+                                    <p class="component__comment-box__elements__reply__text">Reply</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="component__comment-box component__comment-box--reply ms-3" id="first-reply">
-                        <div class="component__comment-box__tittle">
-                            <img src="" alt="avatar" class="component__comment-box__tittle__img img-fluid">
-                            <p class="component__comment-box__tittle__author"></p>
-                            <p class="component__comment-box__tittle__time"></p>
-                        </div>
-                        <p class="component__comment-box__content"></p>
-                        <div class="component__comment-box__elements">
-                            <div class="component__comment-box__elements__rating">
-                                <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="reply-plus">
-                                <p class="component__comment-box__elements__rating__number" id="reply-score"></p>
-                                <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="reply-minus">
+                    <div class="component__comment-box d-sm-flex" id = 'second-comment'>
+                        <div class="desktop-box1">
+                            <div class="component__comment-box__elements__rating component__comment-box__elements__rating--desktop d-none d-sm-flex flex-sm-column">
+                                <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="second-plus-desktop">
+                                <p class="component__comment-box__elements__rating__number--desktop" id="second-score-desktop"></p>
+                                <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="second-minus-desktop">
                             </div>
-                            <div class="component__comment-box__elements__reply" id = "third-reply-btn">
-                                <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
-                                <p class="component__comment-box__elements__reply__text">Reply</p>
+                        </div>
+                        <div class="desktop-box2">
+                            <div class="component__comment-box__tittle">
+                                <img src="" alt="avatar" class="component__comment-box__tittle__img img-fluid">
+                                <p class="component__comment-box__tittle__author"></p>
+                                <p class="component__comment-box__tittle__time"></p>
+                                <div class="component__comment-box__elements__reply component__comment-box__elements__reply--desktop ms-auto d-none d-sm-flex" id ="second-reply-btn-desktop">
+                                    <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
+                                    <p class="component__comment-box__elements__reply__text">Reply</p>
+                                </div>
+                            </div>
+                            <p class="component__comment-box__content"></p>
+                            <div class="component__comment-box__elements">
+                                <div class="component__comment-box__elements__rating d-sm-none">
+                                    <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="second-plus">
+                                    <p class="component__comment-box__elements__rating__number" id="second-score"></p>
+                                    <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="second-minus">
+                                </div>
+                                <div class="component__comment-box__elements__reply d-sm-none" id ="second-reply-btn">
+                                    <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
+                                    <p class="component__comment-box__elements__reply__text">Reply</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="component__comment-box component__comment-box--reply component__comment-box component__comment-box--reply--you ms-3" id = 'second-reply'>
-                        <div class="component__comment-box__tittle">
-                            <img src="" alt="avatar" class="component__comment-box__tittle__img img-fluid">
-                            <p class="component__comment-box__tittle__author"></p>
-                            <p class="component__comment-box__tittle__you ms-2">you</p>
-                            <p class="component__comment-box__tittle__time"></p>
+                    <div class="component__comment-box component__comment-box--reply d-sm-flex ms-3 ms-sm-4 ms-md-5" id="first-reply">
+                        <div class="desktop-box1">
+                            <div class="component__comment-box__elements__rating component__comment-box__elements__rating--desktop d-none d-sm-flex flex-sm-column">
+                                <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="reply-plus-desktop">
+                                <p class="component__comment-box__elements__rating__number--desktop" id="reply-score-desktop"></p>
+                                <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="reply-minus-desktop">
+                            </div>
                         </div>
-                        <p class="component__comment-box__content"></p>
-                        <div class="component__comment-box__elements">
-                            <div class="component__comment-box__elements__rating">
+                        <div class="desktop-box2">
+                            <div class="component__comment-box__tittle">
+                                <img src="" alt="avatar" class="component__comment-box__tittle__img img-fluid">
+                                <p class="component__comment-box__tittle__author"></p>
+                                <p class="component__comment-box__tittle__time"></p>
+                                <div class="component__comment-box__elements__reply component__comment-box__elements__reply--desktop ms-auto d-none d-sm-flex" id = "third-reply-btn-desktop">
+                                    <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
+                                    <p class="component__comment-box__elements__reply__text">Reply</p>
+                                </div>
+                            </div>
+                            <p class="component__comment-box__content"></p>
+                            <div class="component__comment-box__elements">
+                                <div class="component__comment-box__elements__rating d-sm-none">
+                                    <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid" id="reply-plus">
+                                    <p class="component__comment-box__elements__rating__number" id="reply-score"></p>
+                                    <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid" id="reply-minus">
+                                </div>
+                                <div class="component__comment-box__elements__reply d-sm-none" id = "third-reply-btn">
+                                    <img src="./images/icon-reply.svg" alt="reply-icon" class="component__comment-box__elements__reply__img">
+                                    <p class="component__comment-box__elements__reply__text">Reply</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component__comment-box component__comment-box--reply component__comment-box component__comment-box--reply--you d-sm-flex ms-3 ms-sm-4 ms-md-5" id = 'second-reply'>
+                        <div class="desktop-box1">
+                            <div class="component__comment-box__elements__rating component__comment-box__elements__rating--desktop d-none d-sm-flex flex-sm-column">
                                 <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid">
-                                <p class="component__comment-box__elements__rating__number"></p>
+                                <p class="component__comment-box__elements__rating__number--desktop"></p>
                                 <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid">
                             </div>
-                            <div class="component__comment-box__elements__reply">
-                                <img src="./images/icon-delete.svg" alt="delete-icon" class="component__comment-box__elements__reply__img component__comment-box__elements__reply__img--other">
-                                <p class="component__comment-box__elements__reply__text component__comment-box__elements__reply__text--delete me-3">Delete</p>
-                                <img src="./images/icon-edit.svg" alt="reply-icon" class="component__comment-box__elements__reply__img component__comment-box__elements__reply__img--other">
-                                <p class="component__comment-box__elements__reply__text component__comment-box__elements__reply__text--edit">Edit</p>
+                        </div>
+                        <div class="desktop-box2">
+                            <div class="component__comment-box__tittle">
+                                <img src="" alt="avatar" class="component__comment-box__tittle__img img-fluid">
+                                <p class="component__comment-box__tittle__author"></p>
+                                <p class="component__comment-box__tittle__you ms-2">you</p>
+                                <p class="component__comment-box__tittle__time"></p>
+                                <div class="component__comment-box__elements__reply component__comment-box__elements__reply--desktop ms-auto d-none d-sm-flex">
+                                    <img src="./images/icon-delete.svg" alt="delete-icon" class="component__comment-box__elements__reply__img component__comment-box__elements__reply__img--other">
+                                    <p class="component__comment-box__elements__reply__text component__comment-box__elements__reply__text--delete-desktop me-3">Delete</p>
+                                    <img src="./images/icon-edit.svg" alt="reply-icon" class="component__comment-box__elements__reply__img component__comment-box__elements__reply__img--other">
+                                    <p class="component__comment-box__elements__reply__text component__comment-box__elements__reply__text--edit-desktop">Edit</p>
+                                </div>
+                            </div>
+                            <p class="component__comment-box__content"></p>
+                            <div class="component__comment-box__elements">
+                                <div class="component__comment-box__elements__rating d-sm-none">
+                                    <img src="./images/icon-plus.svg" alt="plus-icon" class="component__comment-box__elements__rating__img--plus img-fluid">
+                                    <p class="component__comment-box__elements__rating__number"></p>
+                                    <img src="./images/icon-minus.svg" alt="minus-icon" class="component__comment-box__elements__rating__img--minus img-fluid">
+                                </div>
+                                <div class="component__comment-box__elements__reply d-sm-none">
+                                    <img src="./images/icon-delete.svg" alt="delete-icon" class="component__comment-box__elements__reply__img component__comment-box__elements__reply__img--other">
+                                    <p class="component__comment-box__elements__reply__text component__comment-box__elements__reply__text--delete me-3">Delete</p>
+                                    <img src="./images/icon-edit.svg" alt="reply-icon" class="component__comment-box__elements__reply__img component__comment-box__elements__reply__img--other">
+                                    <p class="component__comment-box__elements__reply__text component__comment-box__elements__reply__text--edit">Edit</p>
+                                </div>
                             </div>
                         </div>
                     </div>

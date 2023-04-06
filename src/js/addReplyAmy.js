@@ -1,4 +1,4 @@
-import {firstComment, firstReplyBtn} from './variables.js'
+import {firstComment, firstReplyBtn, firstReplyBtnDesktop} from './variables.js'
 import {writeReplyAmy} from './writeReplyAmy.js'
 import {editReplyAmy} from './editReplyAmy.js'
 import {insertAfter} from './insertAfter.js'
@@ -8,8 +8,10 @@ export const addReplyAmy = () => {
 
     let newCommentContent = document.querySelector('.component__comment-box--add__input')
     if (newCommentContent.value !== "" && newCommentContent.value !== "@amyrobson ") {
-
+      
        let newCommentBox = document.createElement("div")
+       let newDesktop1Box = document.createElement("div")
+       let newDesktop2Box = document.createElement("div")
        let newCommentBoxTittle = document.createElement("div")
        let newCommentBoxTittleImg = document.createElement("img")
        let newCommentBoxTittleAuthor = document.createElement("p")
@@ -28,7 +30,7 @@ export const addReplyAmy = () => {
        let newCommentBoxElementsReplyImgEdit = document.createElement("img")
        let newCommentBoxElementsReplyTextEdit = document.createElement("p")
 
-       newCommentBox.classList.add('component__comment-box', 'component__comment-box--replyAmy', 'ms-3')
+       newCommentBox.classList.add('component__comment-box', 'component__comment-box--replyAmy', 'ms-3', 'ms-sm-4', 'ms-md-5')
        newCommentBoxTittle.classList.add('component__comment-box__tittle')
        newCommentBoxTittleImg.classList.add('component__comment-box__tittle__img',  'img-fluid')
        newCommentBoxTittleAuthor.classList.add('component__comment-box__tittle__author')
@@ -64,6 +66,8 @@ export const addReplyAmy = () => {
        newCommentBoxElementsReplyTextEdit.textContent = 'Edit'
 
        newCommentBox.appendChild(newCommentBoxTittle);
+       newCommentBox.appendChild(newDesktop1Box);
+       newCommentBox.appendChild(newDesktop2Box);
        newCommentBoxTittle.appendChild(newCommentBoxTittleImg)
        newCommentBoxTittle.appendChild(newCommentBoxTittleAuthor)
        newCommentBoxTittle.appendChild(newCommentBoxTittleYou)
@@ -89,6 +93,7 @@ export const addReplyAmy = () => {
        let addReplyBox = document.querySelector('.component__comment-box--add')
        addReplyBox.remove()
        firstReplyBtn.addEventListener('click', writeReplyAmy)
+       firstReplyBtnDesktop.addEventListener('click', writeReplyAmy)
        newCommentBoxElementsReplyTextDelete.addEventListener('click', () => newCommentBox.remove())
        newCommentBoxElementsReplyTextEdit.addEventListener('click', returnEditedContent)
        newCommentBoxElementsReplyTextEdit.addEventListener('click', editReplyAmy)

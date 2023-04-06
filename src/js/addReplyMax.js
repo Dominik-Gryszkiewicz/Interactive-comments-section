@@ -1,4 +1,4 @@
-import {secondComment, secondReplyBtn} from './variables.js'
+import {secondComment, secondReplyBtn, secondReplyBtnDesktop} from './variables.js'
 import {writeReplyMax} from './writeReplyMax.js'
 import {editReplyMax} from './editReplyMax.js'
 import {insertAfter} from './insertAfter.js'
@@ -10,6 +10,8 @@ export const addReplyMax = () => {
     if (newCommentContent.value !== "" && newCommentContent.value !== "@maxblagun ") {
 
        let newCommentBox = document.createElement("div")
+       let newDesktop1Box = document.createElement("div")
+       let newDesktop2Box = document.createElement("div")
        let newCommentBoxTittle = document.createElement("div")
        let newCommentBoxTittleImg = document.createElement("img")
        let newCommentBoxTittleAuthor = document.createElement("p")
@@ -28,7 +30,7 @@ export const addReplyMax = () => {
        let newCommentBoxElementsReplyImgEdit = document.createElement("img")
        let newCommentBoxElementsReplyTextEdit = document.createElement("p")
 
-       newCommentBox.classList.add('component__comment-box', 'component__comment-box--replyMax', 'ms-3')
+       newCommentBox.classList.add('component__comment-box', 'component__comment-box--replyMax', 'ms-3', 'ms-sm-4', 'ms-md-5')
        newCommentBoxTittle.classList.add('component__comment-box__tittle')
        newCommentBoxTittleImg.classList.add('component__comment-box__tittle__img',  'img-fluid')
        newCommentBoxTittleAuthor.classList.add('component__comment-box__tittle__author')
@@ -64,6 +66,8 @@ export const addReplyMax = () => {
        newCommentBoxElementsReplyTextEdit.textContent = 'Edit'
 
        newCommentBox.appendChild(newCommentBoxTittle);
+       newCommentBox.appendChild(newDesktop1Box);
+       newCommentBox.appendChild(newDesktop2Box);
        newCommentBoxTittle.appendChild(newCommentBoxTittleImg)
        newCommentBoxTittle.appendChild(newCommentBoxTittleAuthor)
        newCommentBoxTittle.appendChild(newCommentBoxTittleYou)
@@ -89,6 +93,7 @@ export const addReplyMax = () => {
        let addReplyBox = document.querySelector('.component__comment-box--add')
        addReplyBox.remove()
        secondReplyBtn.addEventListener('click', writeReplyMax)
+       secondReplyBtnDesktop.addEventListener('click', writeReplyMax)
        newCommentBoxElementsReplyTextDelete.addEventListener('click', () => newCommentBox.remove())
        newCommentBoxElementsReplyTextEdit.addEventListener('click', returnEditedContent)
        newCommentBoxElementsReplyTextEdit.addEventListener('click', editReplyMax)
